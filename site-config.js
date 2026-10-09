@@ -1,9 +1,7 @@
-/* IMPORTANT: add the real business phone number before publishing.
-   Use international format without spaces, e.g. +441234567890.
-   This value controls every call button on the website. */
-window.AUTO_LIFT_CONFIG = {
-  phoneDisplay: "",
-  phoneDial: "",
-  businessEmail: "",
-  websiteUrl: ""
-};
+const SITE_CONFIG = {
+  businessName: "Auto Lift Recovery & Transport Services",
+  ownerName: "Mark Forest",
+  phoneDisplay: "07479846046",
+  phoneLink: "tel:+447479846046",
+  facebookUrl:
+    "https://www.facebook.com/p/Auto-Lift-Recovery-Transport-Services-61580499021433/"

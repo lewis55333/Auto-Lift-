@@ -26,6 +26,49 @@
     height: 58px;
   }
 }
+  .brochure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.brochure-card {
+  overflow: hidden;
+  padding: 20px;
+  border: 1px solid #dce2e6;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.brochure-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  background: #f3f5f6;
+  border-radius: 6px;
+}
+
+.brochure-card h3 {
+  margin-bottom: 6px;
+}
+
+.brochure-card p {
+  color: #65727b;
+}
+
+.brochure-card a {
+  color: #765400;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  .brochure-grid {
+    grid-template-columns: 1fr;
+  }
+}
   <style>
     :root {
       --dark: #101820;
@@ -933,6 +976,42 @@
           <h2>One call can get<br><em>things moving.</em></h2>
         </div>
         <p class="section-intro">
+          <section class="section" id="brochures">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">AUTO LIFT</p>
+      <h2>Recovery &amp; transport<br><em>at a glance.</em></h2>
+    </div>
+    <p class="section-intro">
+      Find out more about our vehicle recovery and transportation services.
+      Explore our brochure artwork below.
+    </p>
+  </div>
+
+  <div class="brochure-grid">
+    <div class="brochure-card">
+      <img
+        src="assets/recovery-brochure.jpg"
+        alt="Auto Lift vehicle recovery brochure"
+        loading="lazy"
+      >
+      <h3>Vehicle Recovery</h3>
+      <p>Information about our recovery services.</p>
+      <a href="#contact">Enquire about recovery →</a>
+    </div>
+
+    <div class="brochure-card">
+      <img
+        src="assets/transport-brochure.jpg"
+        alt="Auto Lift vehicle transportation brochure"
+        loading="lazy"
+      >
+      <h3>Vehicle Transportation</h3>
+      <p>Information about moving your vehicle.</p>
+      <a href="#contact">Enquire about transport →</a>
+    </div>
+  </div>
+</section>
           Tell us what has happened, where your vehicle is and where it needs
           to go. We’ll discuss the next steps with you.
         </p>

@@ -7,7 +7,25 @@
   <meta name="theme-color" content="#101820">
   <meta name="description" content="Auto Lift provides vehicle recovery and vehicle transportation enquiries across the UK, 24 hours a day. Call 07479 846046.">
   <title>Auto Lift | 24/7 Vehicle Recovery &amp; Transport</title>
+.real-logo {
+  display: block;
+  width: 210px;
+  max-width: 100%;
+  height: 65px;
+  object-fit: contain;
+  object-position: left center;
+}
 
+.brand {
+  flex-shrink: 0;
+}
+
+@media (max-width: 760px) {
+  .real-logo {
+    width: 180px;
+    height: 58px;
+  }
+}
   <style>
     :root {
       --dark: #101820;
@@ -845,13 +863,13 @@
   </div>
 
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Auto Lift home">
-      <span class="brand-mark" aria-hidden="true">A↗</span>
-      <span class="brand-word">
-        AUTO <b>LIFT</b>
-        <small>VEHICLE RECOVERY</small>
-      </span>
-    </a>
+  <a class="brand" href="#home" aria-label="Auto Lift home">
+  <img
+    class="real-logo"
+    src="assets/auto-lift-logo.jpg"
+    alt="Auto Lift Recovery"
+  >
+</a>
 
     <nav class="main-nav" aria-label="Main navigation">
       <a href="#services">Services</a>

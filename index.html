@@ -1,47 +1,1204 @@
-<header class="site-header">
-  <a class="brand" href="#home" aria-label="Auto Lift home">
-    <span class="brand-mark" aria-hidden="true">
-      <svg viewBox="0 0 72 36">
-        <path d="M4 24h10l8-11h25l8 7h9l4 4v6h-6a6 6 0 0 0-12 0H27a6 6 0 0 0-12 0H4z"/>
-        <path d="M27 13l-5 11h22l-1-11z"/>
-        <path d="M45 14v10h10l-8-7z"/>
-      </svg>
-    </span>
-    <span class="brand-word">
-      AUTO <b>LIFT</b>
-      <small>VEHICLE RECOVERY</small>
-    </span>
-  </a>
 
-  <button class="menu-toggle"
-          aria-label="Open navigation"
-          aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101820">
+  <meta name="description" content="Auto Lift provides vehicle recovery and vehicle transportation enquiries across the UK, 24 hours a day. Call 07479 846046.">
+  <title>Auto Lift | 24/7 Vehicle Recovery &amp; Transport</title>
 
-  <nav class="main-nav" aria-label="Main navigation">
-    <a href="#services">Services</a>
-    <a href="#coverage">Coverage</a>
-    <a href="#why-us">Why Auto Lift</a>
-    <a href="#contact">Contact</a>
+  <style>
+    :root {
+      --dark: #101820;
+      --dark2: #192631;
+      --yellow: #ffc928;
+      --white: #ffffff;
+      --muted: #b8c3cb;
+      --light: #f3f5f6;
+      --text: #18232c;
+      --border: #dce2e6;
+      --green: #25a85a;
+    }
 
-    <a class="facebook-header"
-       href="https://www.facebook.com/p/Auto-Lift-Recovery-Transport-Services-61580499021433/"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Visit Auto Lift on Facebook">
-      <svg viewBox="0 0 24 24" aria-hidden="true">
-        <path d="M13.5 21v-8h2.7l.4-3.1h-3.1v-2c0-.9.3-1.5 1.6-1.5h1.7V3.6c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.3H7.7v3.1h2.7v8h3.1z"/>
-      </svg>
-      <span>Facebook</span>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topline {
+      padding: 9px 20px;
+      background: var(--yellow);
+      color: var(--dark);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 17px max(5%, calc((100% - 1200px) / 2));
+      background: var(--dark);
+      color: var(--white);
+      border-bottom: 1px solid #ffffff18;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 53px;
+      height: 45px;
+      border-radius: 8px;
+      background: var(--yellow);
+      color: var(--dark);
+      font-size: 29px;
+      font-weight: 900;
+      font-style: italic;
+    }
+
+    .brand-word {
+      font-size: 25px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1px;
+    }
+
+    .brand-word b {
+      color: var(--yellow);
+    }
+
+    .brand-word small {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: 9px;
+      letter-spacing: 2px;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
+
+    .main-nav > a:not(.nav-call):not(.facebook-link) {
+      color: #e0e6ea;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .main-nav > a:hover {
+      color: var(--yellow);
+    }
+
+    .nav-call,
+    .facebook-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 43px;
+      padding: 10px 14px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-call {
+      background: var(--yellow);
+      color: var(--dark);
+    }
+
+    .facebook-link {
+      border: 1px solid #ffffff65;
+      color: var(--white);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      color: var(--white);
+      background:
+        radial-gradient(ellipse at 80% 40%, #344755 0%, transparent 45%),
+        linear-gradient(115deg, #101820 0%, #172733 60%, #293945 100%);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(90deg, #101820 0%, #101820e8 42%, #10182055 100%);
+    }
+
+    .hero-pattern {
+      position: absolute;
+      right: -8%;
+      bottom: -12%;
+      width: 60%;
+      height: 95%;
+      opacity: .15;
+      transform: skewX(-15deg);
+      background: repeating-linear-gradient(
+        115deg,
+        transparent 0 45px,
+        #ffffff 46px 48px,
+        transparent 49px 90px
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: min(1200px, 90%);
+      margin: 0 auto;
+      padding: 85px 0 95px;
+    }
+
+    .eyebrow {
+      color: var(--yellow);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 800px;
+      margin: 20px 0;
+      font-size: clamp(43px, 6.2vw, 76px);
+      line-height: 1.06;
+      letter-spacing: -2.5px;
+    }
+
+    h1 em,
+    h2 em {
+      color: var(--yellow);
+      font-style: normal;
+    }
+
+    .hero-copy {
+      max-width: 590px;
+      color: #d4dde3;
+      font-size: 18px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 52px;
+      padding: 14px 21px;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform .2s, background .2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-yellow {
+      background: var(--yellow);
+      color: var(--dark);
+    }
+
+    .btn-outline {
+      border-color: #ffffff70;
+      color: var(--white);
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      margin-top: 46px;
+    }
+
+    .hero-point {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #e9edf0;
+      font-size: 13px;
+    }
+
+    .hero-point span:first-child {
+      display: grid;
+      place-items: center;
+      width: 35px;
+      height: 35px;
+      border: 1px solid #ffffff50;
+      border-radius: 50%;
+      color: var(--yellow);
+      font-size: 18px;
+    }
+
+    .hero-point strong {
+      display: block;
+      color: var(--white);
+    }
+
+    .section {
+      width: min(1200px, 90%);
+      margin: auto;
+      padding: 85px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 35px;
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      margin: 8px 0 0;
+      font-size: clamp(32px, 4.5vw, 49px);
+      line-height: 1.12;
+      letter-spacing: -1px;
+    }
+
+    .section-heading h2 em,
+    .why-copy h2 em {
+      color: #b68100;
+    }
+
+    .section-intro {
+      max-width: 440px;
+      color: #586670;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .service-card {
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px #10182012;
+    }
+
+    .service-number {
+      color: #9ca8b0;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .service-symbol {
+      margin: 20px 0;
+      color: #b68100;
+      font-size: 34px;
+      font-weight: 800;
+    }
+
+    .service-card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .service-card p {
+      color: #65727b;
+      font-size: 14px;
+    }
+
+    .service-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #765400;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .coverage {
+      background: var(--dark);
+      color: var(--white);
+    }
+
+    .coverage-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .coverage-copy p:not(.eyebrow) {
+      max-width: 540px;
+      color: var(--muted);
+    }
+
+    .coverage-panel {
+      padding: 24px;
+      border: 1px solid #ffffff20;
+      border-radius: 12px;
+      background: #ffffff08;
+    }
+
+    .coverage-art {
+      display: grid;
+      place-items: center;
+      min-height: 280px;
+      border-radius: 8px;
+      background:
+        radial-gradient(ellipse at center, #344957 0%, #1b2a35 60%, #14202a 100%);
+      text-align: center;
+    }
+
+    .coverage-art .uk {
+      color: var(--yellow);
+      font-size: clamp(54px, 8vw, 90px);
+      font-weight: 900;
+      letter-spacing: 4px;
+    }
+
+    .coverage-art p {
+      margin: 0;
+      color: #d8e0e5;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .coverage-caption {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 18px;
+      font-weight: 800;
+    }
+
+    .coverage-caption span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .why-visual {
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      min-height: 330px;
+      padding: 35px;
+      border-radius: 10px;
+      background:
+        radial-gradient(ellipse at 70% 35%, #526774 0%, transparent 40%),
+        linear-gradient(140deg, #263945, #101820);
+      color: var(--yellow);
+      font-size: clamp(50px, 7vw, 80px);
+      font-weight: 900;
+      letter-spacing: -3px;
+    }
+
+    .why-copy > p:not(.eyebrow) {
+      color: #5c6972;
+    }
+
+    .benefit-list {
+      display: grid;
+      gap: 18px;
+      margin: 28px 0;
+    }
+
+    .benefit {
+      display: flex;
+      align-items: start;
+      gap: 13px;
+    }
+
+    .benefit-mark {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: #fff1bf;
+      color: #765400;
+      font-weight: 900;
+    }
+
+    .benefit strong {
+      display: block;
+    }
+
+    .benefit small {
+      color: #64717a;
+    }
+
+    .contact-section {
+      padding: 85px 0;
+      background: var(--light);
+    }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 55px;
+      width: min(1200px, 90%);
+      margin: auto;
+    }
+
+    .contact-copy h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact-copy > p {
+      color: #5e6b74;
+    }
+
+    .contact-card {
+      margin: 25px 0;
+      padding: 23px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    .contact-card strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .contact-card a {
+      color: #775500;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .contact-card .facebook-link {
+      margin-top: 16px;
+      background: #1877f2;
+      color: white;
+      border: 0;
+    }
+
+    .enquiry-form {
+      padding: 32px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--white);
+      box-shadow: 0 10px 35px #1018200b;
+    }
+
+    .form-heading {
+      margin-bottom: 24px;
+    }
+
+    .form-heading small {
+      color: #896400;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .form-heading h3 {
+      margin: 5px 0;
+      font-size: 25px;
+    }
+
+    .form-heading p {
+      margin: 0;
+      color: #687680;
+      font-size: 13px;
+    }
+
+    .form-row {
+      margin-bottom: 17px;
+    }
+
+    .form-row label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .form-row input,
+    .form-row select,
+    .form-row textarea {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cbd3d9;
+      border-radius: 5px;
+      background: white;
+      color: var(--text);
+      font: inherit;
+      font-size: 14px;
+    }
+
+    .form-row input:focus,
+    .form-row select:focus,
+    .form-row textarea:focus {
+      outline: 2px solid #d5a500;
+      outline-offset: 1px;
+    }
+
+    .consent {
+      display: flex;
+      align-items: start;
+      gap: 10px;
+      margin: 18px 0;
+      color: #5c6972;
+      font-size: 12px;
+    }
+
+    .consent input {
+      margin-top: 5px;
+    }
+
+    .consent a {
+      color: #775500;
+    }
+
+    .form-submit {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 800;
+    }
+
+    .form-footnote {
+      margin-bottom: 0;
+      color: #697680;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .site-footer {
+      background: #0b1118;
+      color: var(--white);
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 35px;
+      width: min(1200px, 90%);
+      margin: auto;
+      padding: 55px 0;
+    }
+
+    .footer-main h3 {
+      margin-top: 0;
+      color: var(--yellow);
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: grid;
+      align-content: start;
+      gap: 8px;
+    }
+
+    .footer-links a,
+    .footer-links span {
+      color: #c0c9cf;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--yellow);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 18px 5%;
+      border-top: 1px solid #ffffff20;
+      color: #aab5bd;
+      font-size: 12px;
+    }
+
+    .footer-bottom a {
+      color: #e6eaed;
+    }
+
+    .mobile-callbar {
+      display: none;
+    }
+
+    @media (max-width: 1000px) {
+      .site-header {
+        padding-left: 4%;
+        padding-right: 4%;
+      }
+
+      .main-nav {
+        gap: 12px;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .coverage-inner,
+      .why-grid,
+      .contact-inner {
+        gap: 35px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      html {
+        scroll-padding-top: 75px;
+      }
+
+      .site-header {
+        position: relative;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 17px;
+      }
+
+      .main-nav {
+        justify-content: flex-start;
+        width: 100%;
+      }
+
+      .main-nav > a:not(.nav-call):not(.facebook-link) {
+        padding: 5px 0;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-content {
+        padding: 65px 0 75px;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .hero-copy {
+        font-size: 16px;
+      }
+
+      .hero-points {
+        display: grid;
+        gap: 15px;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .section-heading {
+        display: block;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .coverage-inner,
+      .why-grid,
+      .contact-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .coverage-panel {
+        padding: 15px;
+      }
+
+      .why-visual {
+        min-height: 240px;
+      }
+
+      .enquiry-form {
+        padding: 22px;
+      }
+
+      .footer-main {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-main > .brand {
+        grid-column: 1 / -1;
+      }
+
+      .mobile-callbar {
+        position: sticky;
+        bottom: 0;
+        z-index: 100;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding: 9px 12px;
+        background: var(--dark);
+        box-shadow: 0 -5px 20px #0002;
+      }
+
+      .mobile-callbar a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        min-height: 43px;
+        padding: 8px;
+        border-radius: 5px;
+        background: var(--yellow);
+        color: var(--dark);
+        font-size: 13px;
+        font-weight: 800;
+        text-decoration: none;
+      }
+
+      .mobile-callbar a:last-child {
+        border: 1px solid #ffffff55;
+        background: transparent;
+        color: var(--white);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topline">
+    24/7 VEHICLE RECOVERY &nbsp; • &nbsp; VEHICLE TRANSPORTATION
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Auto Lift home">
+      <span class="brand-mark" aria-hidden="true">A↗</span>
+      <span class="brand-word">
+        AUTO <b>LIFT</b>
+        <small>VEHICLE RECOVERY</small>
+      </span>
     </a>
 
-    <a class="nav-call call-link"
-       href="tel:+447479846046">
-      <span aria-hidden="true">☎</span>
-      <span>07479 846046</span>
-    </a>
-  </nav>
-</header>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#coverage">Coverage</a>
+      <a href="#why-us">Why Auto Lift</a>
+      <a href="#contact">Contact</a>
+      <a class="facebook-link"
+         href="https://www.facebook.com/p/Auto-Lift-Recovery-Transport-Services-61580499021433/"
+         target="_blank" rel="noopener noreferrer">
+        f &nbsp; Facebook
+      </a>
+      <a class="nav-call" href="tel:+447479846046">
+        ☎ &nbsp; 07479 846046
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-pattern" aria-hidden="true"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">VEHICLE RECOVERY · TRANSPORTATION · 24/7</p>
+        <h1>Broken down?<br><em>We’ll get you moving.</em></h1>
+        <p class="hero-copy">
+          When your vehicle lets you down, getting help should be simple.
+          Contact Auto Lift to discuss vehicle recovery and transportation,
+          day or night.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-yellow" href="tel:+447479846046">
+            ☎ &nbsp; Call 07479 846046
+          </a>
+          <a class="btn btn-outline" href="#contact">
+            Request a quote &nbsp; ↗
+          </a>
+        </div>
+
+        <div class="hero-points">
+          <div class="hero-point">
+            <span>◷</span>
+            <div><strong>24/7 enquiries</strong>Day or night</div>
+          </div>
+          <div class="hero-point">
+            <span>↗</span>
+            <div><strong>UK-wide enquiries</strong>Ask about your route</div>
+          </div>
+          <div class="hero-point">
+            <span>✓</span>
+            <div><strong>Clear communication</strong>Speak to our team</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">HOW WE CAN HELP</p>
+          <h2>One call can get<br><em>things moving.</em></h2>
+        </div>
+        <p class="section-intro">
+          Tell us what has happened, where your vehicle is and where it needs
+          to go. We’ll discuss the next steps with you.
+        </p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-number">01 / RECOVERY</div>
+          <div class="service-symbol">↗</div>
+          <h3>Breakdown recovery</h3>
+          <p>
+            Need help after a breakdown? Contact us with your location and
+            vehicle details to discuss recovery options.
+          </p>
+          <a href="#contact">Get assistance →</a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-number">02 / RECOVERY</div>
+          <div class="service-symbol">◇</div>
+          <h3>Accident recovery</h3>
+          <p>
+            Get in touch to discuss moving a vehicle after an incident.
+            If anyone is injured or in danger, call emergency services first.
+          </p>
+          <a href="#contact">Discuss recovery →</a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-number">03 / TRANSPORT</div>
+          <div class="service-symbol">▱</div>
+          <h3>Vehicle transportation</h3>
+          <p>
+            Arrange transport for a car or other vehicle between locations.
+            Tell us the collection and delivery postcodes.
+          </p>
+          <a href="#contact">Request transport →</a>
+        </article>
+
+        <article class="service-card">
+          <div class="service-number">04 / TRANSPORT</div>
+          <div class="service-symbol">⇄</div>
+          <h3>Long-distance moves</h3>
+          <p>
+            Need a vehicle moved further afield? Send us your route and
+            timings to enquire about availability and pricing.
+          </p>
+          <a href="#contact">Get a quote →</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="coverage" id="coverage">
+      <div class="section coverage-inner">
+        <div class="coverage-copy">
+          <p class="eyebrow">COVERAGE</p>
+          <h2>Going somewhere?<br><em>Let’s talk logistics.</em></h2>
+          <p>
+            Auto Lift welcomes enquiries for vehicle recovery and
+            transportation across the UK. Share your collection point,
+            destination and vehicle details so we can discuss your journey.
+          </p>
+          <a class="btn btn-yellow" href="tel:+447479846046">
+            ☎ &nbsp; Call Auto Lift
+          </a>
+        </div>
+
+        <div class="coverage-panel">
+          <div class="coverage-art">
+            <div>
+              <div class="uk">UK</div>
+              <p>VEHICLE RECOVERY &amp; TRANSPORT</p>
+            </div>
+          </div>
+          <div class="coverage-caption">
+            <div>
+              Nationwide enquiries
+              <span>Confirm your route with our team</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section why-grid" id="why-us">
+      <div class="why-visual" aria-label="Auto Lift vehicle recovery">
+        AUTO LIFT
+      </div>
+
+      <div class="why-copy">
+        <p class="eyebrow">WHY AUTO LIFT</p>
+        <h2>When you’re stuck,<br><em>clarity matters.</em></h2>
+        <p>
+          A vehicle problem can throw your plans into chaos. Our aim is to
+          make the next step straightforward: tell us what you need, get
+          clear information and discuss your options.
+        </p>
+
+        <div class="benefit-list">
+          <div class="benefit">
+            <span class="benefit-mark">✓</span>
+            <div>
+              <strong>Simple to contact</strong>
+              <small>Call us directly or send an enquiry.</small>
+            </div>
+          </div>
+
+          <div class="benefit">
+            <span class="benefit-mark">✓</span>
+            <div>
+              <strong>Details that help us help you</strong>
+              <small>Share your location, vehicle and destination.</small>
+            </div>
+          </div>
+
+          <div class="benefit">
+            <span class="benefit-mark">✓</span>
+            <div>
+              <strong>Clear communication</strong>
+              <small>Discuss availability and costs before agreeing a job.</small>
+            </div>
+          </div>
+        </div>
+
+        <a class="btn btn-yellow" href="#contact">Tell us what you need →</a>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-inner">
+        <div class="contact-copy">
+          <p class="eyebrow">GET IN TOUCH</p>
+          <h2>Let’s get you<br><em>back on the road.</em></h2>
+          <p>
+            Call us for urgent enquiries, or provide your details and
+            information about the vehicle and journey.
+          </p>
+
+          <div class="contact-card">
+            <strong>CALL AUTO LIFT</strong>
+            <a href="tel:+447479846046">07479 846046</a>
+            <p>For recovery and vehicle transportation enquiries.</p>
+
+            <strong>BUSINESS OWNER</strong>
+            <p>Mark Forest</p>
+
+            <a class="facebook-link"
+               href="https://www.facebook.com/p/Auto-Lift-Recovery-Transport-Services-61580499021433/"
+               target="_blank" rel="noopener noreferrer">
+              f &nbsp; Visit us on Facebook ↗
+            </a>
+          </div>
+        </div>
+
+        <form class="enquiry-form"
+              action="https://formsubmit.co/REPLACE-WITH-YOUR-EMAIL"
+              method="POST">
+
+          <input type="hidden" name="_subject"
+                 value="New Auto Lift website enquiry">
+          <input type="hidden" name="_captcha" value="true">
+
+          <div class="form-heading">
+            <small>01 / ENQUIRY</small>
+            <h3>Request a callback or quote</h3>
+            <p>Fields marked * are required.</p>
+          </div>
+
+          <div class="form-row">
+            <label for="customer-name">Your name *</label>
+            <input id="customer-name" name="Name"
+                   autocomplete="name" required
+                   placeholder="Full name">
+          </div>
+
+          <div class="form-row">
+            <label for="customer-phone">Phone number *</label>
+            <input id="customer-phone" name="Phone"
+                   type="tel" autocomplete="tel" required
+                   placeholder="Best number to reach you">
+          </div>
+
+          <div class="form-row">
+            <label for="customer-email">Email address</label>
+            <input id="customer-email" name="Email"
+                   type="email" autocomplete="email"
+                   placeholder="you@example.com">
+          </div>
+
+          <div class="form-row">
+            <label for="service-type">What do you need? *</label>
+            <select id="service-type" name="Service" required>
+              <option value="" selected disabled>Select a service</option>
+              <option>Breakdown recovery</option>
+              <option>Accident recovery</option>
+              <option>Vehicle transportation</option>
+              <option>Long-distance transport</option>
+              <option>Other / not sure</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="pickup">Collection location *</label>
+            <input id="pickup" name="Collection location"
+                   required placeholder="Town or postcode">
+          </div>
+
+          <div class="form-row">
+            <label for="destination">Destination</label>
+            <input id="destination" name="Destination"
+                   placeholder="Town or postcode">
+          </div>
+
+          <div class="form-row">
+            <label for="vehicle-details">Vehicle and situation *</label>
+            <textarea id="vehicle-details" name="Vehicle and situation"
+                      required rows="4"
+                      placeholder="Vehicle make/model and what happened"></textarea>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" required>
+            <span>
+              I agree to be contacted about this enquiry and have read the
+              <a href="privacy.html">privacy information</a>. *
+            </span>
+          </label>
+
+          <button class="btn btn-yellow form-submit" type="submit">
+            Send enquiry →
+          </button>
+
+          <p class="form-footnote">
+            For urgent recovery, please call rather than relying on this form.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main">
+      <a class="brand" href="#home" aria-label="Auto Lift home">
+        <span class="brand-mark" aria-hidden="true">A↗</span>
+        <span class="brand-word">
+          AUTO <b>LIFT</b>
+          <small>VEHICLE RECOVERY</small>
+        </span>
+      </a>
+
+      <div class="footer-links">
+        <h3>QUICK LINKS</h3>
+        <a href="#services">Our services</a>
+        <a href="#coverage">Coverage</a>
+        <a href="#why-us">Why Auto Lift</a>
+        <a href="#contact">Contact us</a>
+        <a href="privacy.html">Privacy information</a>
+      </div>
+
+      <div class="footer-links">
+        <h3>CONTACT</h3>
+        <a href="tel:+447479846046">07479 846046</a>
+        <a href="https://www.facebook.com/p/Auto-Lift-Recovery-Transport-Services-61580499021433/"
+           target="_blank" rel="noopener noreferrer">Facebook page ↗</a>
+        <span>24/7 recovery enquiries</span>
+        <span>Vehicle recovery &amp; transportation</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Auto Lift. All rights reserved.</span>
+      <span>Vehicle recovery · Vehicle transportation</span>
+    </div>
+  </footer>
+
+  <div class="mobile-callbar">
+    <a href="tel:+447479846046">☎ &nbsp; Call Auto Lift</a>
+    <a href="#contact">Request a quote →</a>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>
+   
